@@ -10,16 +10,16 @@ using JokesWebAPP.Models;
 
 namespace JokesWebAPP.Controllers
 {
-    public class PersonController : Controller
+    public class PersonsContoller : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public PersonController(ApplicationDbContext context)
+        public PersonsContoller(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Person
+        // GET: PersonsContoller
         public async Task<IActionResult> Index()
         {
               return _context.Person != null ? 
@@ -27,7 +27,7 @@ namespace JokesWebAPP.Controllers
                           Problem("Entity set 'ApplicationDbContext.Person'  is null.");
         }
 
-        // GET: Person/Details/5
+        // GET: PersonsContoller/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Person == null)
@@ -45,18 +45,18 @@ namespace JokesWebAPP.Controllers
             return View(person);
         }
 
-        // GET: Person/Create
+        // GET: PersonsContoller/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Person/Create
+        // POST: PersonsContoller/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Hight,Width")] Person person)
+        public async Task<IActionResult> Create([Bind("Id,Name,Height,Weight")] Person person)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +67,7 @@ namespace JokesWebAPP.Controllers
             return View(person);
         }
 
-        // GET: Person/Edit/5
+        // GET: PersonsContoller/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Person == null)
@@ -83,12 +83,12 @@ namespace JokesWebAPP.Controllers
             return View(person);
         }
 
-        // POST: Person/Edit/5
+        // POST: PersonsContoller/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Hight,Width")] Person person)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Height,Weight")] Person person)
         {
             if (id != person.Id)
             {
@@ -118,7 +118,7 @@ namespace JokesWebAPP.Controllers
             return View(person);
         }
 
-        // GET: Person/Delete/5
+        // GET: PersonsContoller/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Person == null)
@@ -136,7 +136,7 @@ namespace JokesWebAPP.Controllers
             return View(person);
         }
 
-        // POST: Person/Delete/5
+        // POST: PersonsContoller/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

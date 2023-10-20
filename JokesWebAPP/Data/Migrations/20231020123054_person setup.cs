@@ -5,7 +5,7 @@
 namespace JokesWebAPP.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class initialperson : Migration
+    public partial class personsetup : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,8 +17,8 @@ namespace JokesWebAPP.Data.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
-                    Hight = table.Column<decimal>(type: "TEXT", nullable: false),
-                    Width = table.Column<decimal>(type: "TEXT", nullable: false)
+                    Height = table.Column<decimal>(type: "TEXT", nullable: false),
+                    Weight = table.Column<decimal>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {

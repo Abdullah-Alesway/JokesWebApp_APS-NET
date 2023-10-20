@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JokesWebAPP.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231020112752_initial person")]
-    partial class initialperson
+    [Migration("20231020123054_person setup")]
+    partial class personsetup
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,14 +45,14 @@ namespace JokesWebAPP.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<decimal>("Hight")
+                    b.Property<decimal>("Height")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("Width")
+                    b.Property<decimal>("Weight")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
