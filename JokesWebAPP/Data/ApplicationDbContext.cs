@@ -11,5 +11,4 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
     public DbSet<JokesWebAPP.Models.Joke> Joke { get; set; } = default!;
-    public DbSet<JokesWebAPP.Models.Person> Person { get; set; } = default!;
 }

@@ -33,28 +33,7 @@ namespace JokesWebAPP.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Joke");
-                });
-
-            modelBuilder.Entity("JokesWebAPP.Models.Person", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<decimal>("Height")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("Weight")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Person");
+                    b.ToTable("Joke", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
