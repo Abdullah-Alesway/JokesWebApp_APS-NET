@@ -48,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9rZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/abdullah/Courses/Projects/C\#/JokesWebAPP/JokesWebAPP/Views/Jokes/ShowSearchForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9rZXMvU2hvd1NlYXJjaEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/abdullah/Courses/Projects/C\#/JokesWebAPP/JokesWebAPP/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
